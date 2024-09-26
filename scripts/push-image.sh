@@ -17,5 +17,5 @@ set -u # or set -o nounset
 : "$VERSION"
 : "$REGISTRY_UN"
 : "$REGISTRY_PW"
-echo $REGISTRY_PW | docker login $CONTAINER_REGISTRY --username $REGISTRY_UN --password-stdin
+echo $REGISTRY_PW| docker login $CONTAINER_REGISTRY --username $REGISTRY_UN --password-stdin
 docker push $CONTAINER_REGISTRY/video-streaming:$VERSION
